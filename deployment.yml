@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: python
+  namespace: python-deployment
+  labels:
+    app: python
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata: 
+      app: python
+    spec:
+      containers:
+        name: python-container
+        image: python:latest
+        ports:
+          containerPort: 80
+

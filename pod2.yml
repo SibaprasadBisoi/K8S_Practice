@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+spec:
+  containers: 
+    name: ubuntu-container
+    image: ubuntu:latest
+    command: ["/bin/bash", "-c", "while true; do echo Hello dosto!; sleep 10; done"]
+    ports:
+      containerPort: 80

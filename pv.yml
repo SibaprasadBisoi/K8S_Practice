@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: SQL-pv
+spec:
+  storage:
+    capacity: 1024mi
+  accessModes:
+    ReadWriteOnce
+  hostPath:
+    path: /tmp/sql
