@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  namespace: demo
+spec:
+  containers:
+    name: demo-pod
+    image: ubuntu:latest
+    command: [ "/bin/bash", "-c", while true; echo This is practice pod; done]
