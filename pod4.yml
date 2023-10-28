@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+spec:
+  containers:
+    name: ubuntu
+    image: ubuntu:latest
+    command: ["/bin/bash", '-c', "while true; do echo congratulations; sleep 1; done"  ]
