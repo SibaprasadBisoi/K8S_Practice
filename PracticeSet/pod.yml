@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: practice-pod
+  namespace: practice
+spec:
+  container:
+    name: practice-container
+    image: ubuntu:latest
+    command: [ "/bin/bash", "-c", while true; echo this is practice pod; done]
+    ports:
+      ContainerPort: 80

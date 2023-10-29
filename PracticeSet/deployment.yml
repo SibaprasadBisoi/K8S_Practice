@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: practice
+  label:
+    app: nginx
+spec:
+  replicas: 7
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      app: nginx
+    spec:
+      container:
+        name: practice-container
+        image: ubuntu:latest
+        command: [ "/bin/bash", "-c", while true; echo this deployment is for practice; done]
+        ports:
+          ContainerPort: 80
