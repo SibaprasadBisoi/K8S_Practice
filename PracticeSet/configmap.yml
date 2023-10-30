@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: configMap
+metadata:
+  name: mysql-initdb-config
+data:
+  init.sql:
+    CREATE DATABASE IF NOT EXISTS mydb;
+    USE mydb;
+    CREATE TABLE messages (id INT AUTO_INCREAMENT PRIMARY KEY, message TEXT);
