@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.in
+kind: ingress
+metadata:
+  name: nginx-ingress
+spec:
+  rules: 
+    - host: abc.com
+        paths: 
+          - path: /app1
+            pathtype: Prefix
+            backend:
+              service: 
+                name: app1-service
+                port:
+                  number: 80
+          - path: /app2
+            pathtype: Prefix
+            backend:
+              service:
+                name: app2-service
+                port:
+                  number: 80
+        
